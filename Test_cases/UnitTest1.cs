@@ -1,4 +1,7 @@
-using UserRegistration;
+using UserRegistration2;
+using System;
+using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UserRegistrationTest
 {
@@ -10,7 +13,6 @@ namespace UserRegistrationTest
         {
             string expected = "Baruni";
             string message = "Valid";
-
             string actual = userRegistration.validateFirstName(expected);
 
             Assert.AreEqual(message, actual);
@@ -20,7 +22,6 @@ namespace UserRegistrationTest
         {
             string expected = "Bk";
             string message = "Invalid";
-            UserRegistration ur = new UserRegistration();
 
             string actual = userRegistration.validateFirstName(expected);
 
@@ -61,7 +62,7 @@ namespace UserRegistrationTest
         [TestMethod]
         public void validPassword()
         {
-            string expected = "abc@Xyz";
+            string expected = "abc@Xyzy1";
             string message = "Valid";
             string actual = userRegistration.validatePassword(expected);
 
@@ -71,7 +72,7 @@ namespace UserRegistrationTest
         [TestMethod]
         public void invalidPassword()
         {
-            string expected = "P1324ad";
+            string expected = "123456";
             string message = "Invalid";
             string actual = userRegistration.validatePassword(expected);
 
@@ -82,7 +83,7 @@ namespace UserRegistrationTest
         {
             string expected = "91 7708554905";
             string message = "Valid";
-            string actual = userRegistration.validatePhone(expected);
+            string actual = userRegistration.validatePhoneNum(expected);
 
             Assert.AreEqual(message, actual);
         }
@@ -91,7 +92,7 @@ namespace UserRegistrationTest
         {
             string expected = "91 12345";
             string message = "Invalid";
-            string actual = userRegistration.validatePhone(expected);
+            string actual = userRegistration.validatePhoneNum(expected);
 
             Assert.AreEqual(message, actual);
         }
