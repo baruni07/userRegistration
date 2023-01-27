@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace UserRegistration
+namespace UserRegistration2
 {
     class Program
     {
         static void Main(string[] args)
         {
             Console.Write("Enter user f_name: ");
-            string f_name = Console.ReadLine();          
+            string f_name = Console.ReadLine();
             userRegistration.validateFirstName(f_name);
 
             Console.Write("Enter user l_name: ");
